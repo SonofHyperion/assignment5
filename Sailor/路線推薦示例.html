@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Services - Sailor Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v4.9.1
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html"><img src="icon.png" alt="icon"></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+
+          <li class="dropdown"><a href="#"><span>關於我們</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="我們是.html" class="active">我們是</a></li>
+
+              <li><a href="社交平台.html">社交平台</a></li>
+
+              
+            </ul>
+          </li>
+          <li><a href="路線推薦.html">路線推薦</a></li>
+          <li><a href="目的地.html">目的地</a></li>
+          <li><a href="會員服務.html">會員服務</a></li>
+          <li><a href="blog.html">Blog</a></li>
+
+        
+          <li><a href="登錄.html" class="getstarted">點擊開啟線下城考！</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>梧桐深處「貝當區」——武康路</h2>
+          <ol>
+            <li><a href="index.html">首頁</a></li>
+            <li>路線推薦</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Services Section ======= -->
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+<meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+<title>百度地图API自定义地图</title>
+<!--引用百度地图API-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+
+<body>
+  <!--百度地图容器-->
+  <br>
+  <br>
+  <br>
+  <div style="width:40%;height: 300px;;border:#ccc solid 1px;left: 30%;" id="dituContent"></div>
+</body>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+        addPolyline();//向地图中添加线
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(121.446304,31.216521);//定义一个中心点坐标
+        map.centerAndZoom(point,16);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"武康大樓",content:"我的备注",point:"121.444292|31.210529",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ,{title:"武康庭",content:"我的备注",point:"121.445459|31.212707",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ,{title:"巴金故居",content:"我的备注",point:"121.447256|31.215564",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ,{title:"柯靈故居",content:"我的备注",point:"121.448765|31.217355",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ,{title:"德國領事館",content:"我的备注",point:"121.449807|31.216058",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ,{title:"丁香花園",content:"我的备注",point:"121.444921|31.218467",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ,{title:"興國書店",content:"我的备注",point:"121.44183|31.215409",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+//标注线数组
+    var plPoints = [{style:"solid",weight:4,color:"#f00",opacity:0.6,points:["121.444382|31.210375","121.445495|31.212383","121.446394|31.213494","121.446933|31.214822","121.44722|31.216212","121.447364|31.217262","121.450382|31.217015","121.450238|31.216645","121.449376|31.215749","121.449232|31.214452","121.448334|31.214761","121.446897|31.214637","121.444274|31.214853","121.443843|31.214792","121.443699|31.215625","121.445711|31.217262","121.444417|31.217293","121.443843|31.218003","121.444885|31.218683","121.443807|31.217818","121.441615|31.217386","121.444417|31.210437"]}
+		 ];
+    //向地图中添加线函数
+    function addPolyline(){
+		for(var i=0;i<plPoints.length;i++){
+			var json = plPoints[i];
+			var points = [];
+			for(var j=0;j<json.points.length;j++){
+				var p1 = json.points[j].split("|")[0];
+				var p2 = json.points[j].split("|")[1];
+				points.push(new BMap.Point(p1,p2));
+			}
+			var line = new BMap.Polyline(points,{strokeStyle:json.style,strokeWeight:json.weight,strokeColor:json.color,strokeOpacity:json.opacity});
+			map.addOverlay(line);
+		}
+	}
+    
+    initMap();//创建和初始化地图
+</script>
+</html>
+  
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+
+  <div class="row content">
+    <div class="col-md-2">
+      <h2>簡介</h2>
+      <div id="img-content">
+        <br>
+       
+    </div>
+
+    </div>
+    <div class="col-lg-10 pt-4 pt-lg-0">
+      <p>
+        武康路是中國上海市徐匯區的一條街道，大致為南北走向，北起華山路，南至淮海中路接天平路、餘慶路。馬路長1183米，寬12米到16米。武康路兩旁以民國時期建造的花園洋房與歷史公寓為主，是上海64條永不拓寬的馬路之一，2011年6月，武康路被評為中國歷史文化名街。
+
+        武康路原名福開森路（Route Ferguson），1907年，上海法租界公董局將原南洋公學監院美國美以美會傳教士福開森開闢的一條土路拓寬並鋪上煤渣屑，並正式命名為「福開森路」。1914年，法租界向西拓展後，將福開森路分為三段，東段改為巨潑來斯路，南段改為姚主教路，中段依舊為福開森路。1943年汪精衛政府接收租界時，將巨潑來斯路、姚主教路和福開森路分別改名為安福路、天平路和武康路。武康路路名得名於浙江省武康縣（今已併入德清縣）。
+      </p>
+      
+      
+    </div>
+  </div>
+
+</div>
+
+<br>
+
+<div class="container">
+
+  <div class="row content">
+    <div class="col-md-2">
+      <h2>精品店</h2>
+      <div id="img-content">
+        <br>
+       
+    </div>
+
+    </div>
+    <div class="col-lg-10 pt-4 pt-lg-0">
+      <p>
+        成為網紅之前，武康路很安靜，沒什麽外人來。香港導演王家衛幼時在上海生活，母親下班後，總領著他沿著武康路走回家。那些「樹啊，影啊」讓他著迷，「經過上海交響樂團訓練地時，每次都會聽見音樂」。
+        2011年巴金故居開放是這裏走紅的起點——這座位於武康路113號的洋房去年疫情期間關閉，至今沒有再開放。工作生活都在武康路的自行車修理鋪老板回憶，人流湧入要從10年前說起，當時武康路上開了幾家紅極一時的面包店、冰淇淋店，無論寒暑都有年輕人排隊購買，「那時候是為了吃啊，不是拍照片。以前沒人拍的。」
+      
+      <br>
+      <br>
+
+      在這裡，我們將介紹數家伴隨著武康路的走紅而紅火的店鋪。
+      </p>
+      <ul>
+        <li></i>老房子藝術中心</li>
+        <li></i>秋水空間</li>
+        <li></i>E.P.I.C.酒吧 </li>
+        <li></i>夏朵西餐廳 </li>
+      </ul>
+      
+      
+    </div>
+  </div>
+
+</div>
+<br>
+<br>
+<br>
+    
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>城市行走</h3>
+              <p>
+                圓明園路185號<br>
+                蘭心大樓1層<br><br>
+                <strong>電話:</strong> +86 1145141919810 <br>
+                <strong>E-mail:</strong> Tadokoro Koji@gmail.com<br>
+              </p>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-lg-3 footer-links">
+            <h4>關注我們</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <img src="assets/img/social media icon/bilibili.png" alt="bilibili">&nbsp &nbsp<a href="https://space.bilibili.com/1874052303?spm_id_from=333.337.0.0">&nbsp &nbsp 嗶哩嗶哩動畫網</a></li>
+              <li><i class="bx bx-chevron-right"></i> <img src="assets/img/social media icon/408769.png" alt="weibo">&nbsp&nbsp<a href="https://weibo.com/jiliangyin">&nbsp &nbsp 新浪微博</a></li>
+              <li><i class="bx bx-chevron-right"></i> <img src="assets/img/social media icon/neon-tiktok-logo(1).png" alt="tiktok">&nbsp&nbsp<a href="https://www.douyin.com/user/MS4wLjABAAAAJXQ1_e8ZPW8FubSKIshNrJIKvmw0fhCn1sFgmjQHYcs">&nbsp&nbsp抖音</a></li>
+              <li><i class="bx bx-chevron-right"></i> <img src="assets/img/social media icon/732258.png" alt="Wechat">&nbsp&nbsp<a href="http://mp.weixin.qq.com/profile?src=3&timestamp=1670099998&ver=1&signature=T*7V6owZmcz9eNkP34*m8KeIN*fwkBVUBANg0zmTYfSQyDtie5sOkDz6ICRB*cVAJFPwyCaSLX-9sETe6KmSbQ==">&nbsp&nbsp微信公眾號</a></li>
+            </ul>
+          </div>
+
+
+          <div class="col-lg-4 col-lg-6 footer-newsletter">
+            <a href="會員服務.html"><h1>成為本站會員，享受精品線路！</h1></a>
+            <p>我們是獨立的上海都市空間研究個體，始終相信時間的力量。我們的存在是為了保存上海的文化遺跡，保衛我們的現代生活。
+              <br><br>
+              點擊輸入郵箱，接受新路線信息！
+            </p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="輸入郵箱以訂閱">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy;  All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
+       
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
